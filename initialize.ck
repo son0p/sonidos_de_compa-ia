@@ -10,6 +10,6 @@ Machine.add(me.dir()+"/ModesClass.ck");
 // Players
 
 // Modulators
-
-Machine.add(me.dir()+"/glissons.ck");
-//Machine.add(me.dir()+"/looper.ck");
+//Machine.add(me.dir()+"/drones.ck");
+//Machine.add(me.dir()+"/glissons.ck");
+Machine.add(me.dir()+"/looper.ck");

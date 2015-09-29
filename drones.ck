@@ -1,15 +1,16 @@
-188.00 => float root;
+[330.00, 180, 443, 90, 150, 170] @=> float roots[];
+roots[Math.random2(0, roots.cap()-1)] => float root;
 SinOsc sines[8];
 Pan2 panning[8];
 Envelope envelopes[8];
 NRev reverbs[8];
-1000.0 => float clusterWidth; // slider
+100.0 => float clusterWidth; // slider
 for(0 => int i; i < sines.cap(); i++)
 {
  sines[i] => envelopes[i] => reverbs[i] => panning[i] => dac;
+ envelopes[i].keyOn();
  .01 => sines[i].gain;
   root => sines[i].freq;
-  envelopes[i].keyOn();
   0.1 => reverbs[i].mix;
 }
 while(true)
